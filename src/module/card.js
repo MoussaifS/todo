@@ -16,15 +16,21 @@ function cardCreated (taskName , priority) {
     card.setAttribute("class", "card");
 
 
-    btnDone.setAttribute("id", "btn");
-    btnDone.textContent= "DONE"; 
-    btnCancel.setAttribute("id", "btnX");
-    btnCancel.textContent= "X";
+    let addBtn = document.createElement("button");
+    let cancelBtn = document.createElement("button")
     
-    div3.appendChild(btnDone);
-    div3.appendChild(btnCancel);
+    addBtn.textContent = "✓";
+    cancelBtn.textContent = "x";
 
+    addBtn.setAttribute("class", "cardDone");
+    cancelBtn.setAttribute("class", "cardCancel");
     
+    div3.appendChild(addBtn);
+    div3.appendChild(cancelBtn);
+
+    cancelBtn.onclick = function() { 
+        card.remove();
+    }
 
 
 
@@ -44,8 +50,20 @@ function cardCreated (taskName , priority) {
             card.setAttribute("id", "priorityLow");
             break;
     }
+
     card.appendChild(div1)
     card.appendChild(div3)
+
+    let doneCards = [];
+    addBtn.onclick = function() {
+        card.classList.add("cardisDone");
+        let c = card.innerHTML
+        doneCards.push(c)
+        card.classList.remove("card");
+        console.log(doneCards)
+    };
+
+    
     return card;
 } 
 

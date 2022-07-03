@@ -1,34 +1,51 @@
 import addcard from "./module/additon"
 import cardCreated from "./module/card"
 
+import project from "./module/projects"
 
 
 
-let body = document.querySelector('body');
 
 
+
+
+
+let body = document.querySelector('body')
+let contentBorde = document.querySelector('.contentBorde')
 let addbtn = document.getElementById('add');
+let donebtn = document.getElementById('DONE');
+let onGoing = document.getElementById('ONGOING');
+let allBtn = document.querySelectorAll('.btn');
+let nav = document.querySelector('nav');
 
 
+nav.appendChild(project());
 
+let temp = contentBorde
+
+// donebtn.addEventListener('click', () => {
+//     let doneCards = document.querySelectorAll('.cardisDone')
+//     contentBorde.textContent=temp
+//     contentBorde.textContent = '';
+//     doneCards.forEach(done => { 
+//         contentBorde.appendChild(done);
+//      })  
+// })
 
 addbtn.addEventListener('click', () => {
-    
-    let a = document.getElementById('task').value;
-    let b = document.getElementById('date').value;
-    let c = document.getElementsByName('priority')[0].value;
-    let d = document.getElementsByName('project')[0].value;
-    
-    body.appendChild(cardCreated (a , c))
-
-
+      contentBorde.appendChild(addcard()); 
 })
 
-      
 
-body.appendChild(addcard());
+onGoing.addEventListener('click', () => {
+    let Cards = document.querySelectorAll('.card')
+    contentBorde.textContent=temp
+    contentBorde.textContent = '';
 
-
+    Cards.forEach(card => { 
+        contentBorde.appendChild(card);
+     })  
+})
 
 
 

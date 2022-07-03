@@ -1,27 +1,68 @@
 html{
     background-color: rgba(0, 0, 0, 0.596);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+body {
+    border: 1px solid rgb(0, 174, 255);
+    display: flex;
+    width: 80%;
+    margin-top: 10%;
 }
 
 nav {
-   
-    
     display: flex;
     flex-direction: column;
     border : 1px solid blue;    
 }
 .btn {
-    font-size:  2rem;
+    font-size:  1.5rem;
     padding: 1rem;
-    width: 15rem;
-    background-color: #4bb8ff;
+    width: 20rem;
+    border:  1px solid black;
+    border-radius:  5%;
+    background-color:  white;
+    margin: 1rem;
+
+
 }
 
-div {
+
+.disableBtn {
     
 }
 
+.contentBorde{
+    width:  80%;
+    border: 1px solid rgba(29, 211, 29, 0.479);
+    display:  flex;
+    flex-direction:  column;
+    align-items: center;
+  
 
+}
 
+.proSpace {
+    font-size:  1.9rem;
+    padding-top: 1rem;
+    padding-bottom:  1rem;
+    width: 20rem;
+    border:  1px solid black;
+    background-color:  white;
+    text-align:  center;
+    margin: 1rem;
+    border-radius:  5%;
+    display:  flex;
+    flex-direction: column;
+
+}
+.proSpace main {
+    margin-top:  1rem ;
+    font-size:  1.3rem;
+}
 
 .card {
     background: #f0f0f0;
@@ -29,9 +70,22 @@ div {
     transition: all 0.5s;
     margin : 10px;
     padding: 10px;
-    width:  50%;
+    width:  80%;
     border-radius:  5%;
+    display: flex; 
+    justify-content: space-evenly
+   }
 
+   .cardisDone {
+    background: #f0f0f0;
+    opacity: 0.4;
+    border-radius: 10px;
+    transition: all 0.5s;
+    text-decoration: line-through;
+    margin : 10px;
+    padding: 10px;
+    width:  80%;
+    border-radius:  5%;
     display: flex; 
     justify-content: space-evenly
    }
@@ -56,18 +110,21 @@ div {
     background-color:  #4bb7ff9d;
     margin : 10px;
     padding: 10px;
-    width:  50%;
-    border-radius:  5%;
-    
+    width:  80%;
+    border-radius: 5%;
+    display:  flex ;
+    flex-direction:  row;
+    align-items:  center;
 }
 
-.cardCreator > form {
-    
-    display:  flex ;
-    
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
+
+
+.cardCreator > #form {
+    background-color: rgba(29, 211, 29, 0.623);
+    width:  100%;
+    height:  100%;
+    display:  flex;
+    justify-content: space-around;
 }
 
 
@@ -94,3 +151,4 @@ div {
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
     background-color: rgba(29, 211, 29, 0.479);
 }
+
